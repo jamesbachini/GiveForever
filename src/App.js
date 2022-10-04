@@ -82,7 +82,7 @@ function App() {
             <button onClick={withdraw}>WITHDRAW</button>
           </div>
           <div className="App-contract">
-            Contract <a href="https://etherscan.io/address/0xf0a8B14F0A9Ae12c994872028d3B520D303A8F68" target="_blank">0xf0a8B14F0A9Ae12c994872028d3B520D303A8F68</a>
+            Contract <a href="https://etherscan.io/address/0xf0a8B14F0A9Ae12c994872028d3B520D303A8F68" target="_blank" el="noreferrer">0xf0a8B14F0A9Ae12c994872028d3B520D303A8F68</a>
           </div>
       </div>
       </header>
