@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { ethers } from 'ethers';
 import contractABI from './GiveForeverABI.json';
 
-const contractAddress = '0xf0a8B14F0A9Ae12c994872028d3B520D303A8F68'; // Goerli
+const contractAddress = '0xf0a8B14F0A9Ae12c994872028d3B520D303A8F68'; // Goerli & Mainnet
 let provider = new ethers.providers.Web3Provider(window.ethereum);
 let contract = new ethers.Contract(contractAddress, contractABI, provider);
 let signer;
@@ -19,8 +19,13 @@ function App() {
     signer = provider.getSigner();
     contract = new ethers.Contract(contractAddress, contractABI, signer);
     const userAddress = await signer.getAddress();
+    const networkData = await provider.getNetwork();
+    let networkName = 'unknown';
+    if (networkData.chainId === 1) networkName = 'mainnet';
+    if (networkData.chainId === 5) networkName = 'goerli';
+
     console.log(userAddress);
-    setConnection(`Connected: ${userAddress}`);
+    setConnection(`Connected to ${networkName} ${userAddress}`);
     updateBalances();
   }
 
@@ -75,6 +80,9 @@ function App() {
           </div>
           <div className="App-button-box">
             <button onClick={withdraw}>WITHDRAW</button>
+          </div>
+          <div className="App-contract">
+            Contract <a href="https://etherscan.io/address/0xf0a8B14F0A9Ae12c994872028d3B520D303A8F68" target="_blank">0xf0a8B14F0A9Ae12c994872028d3B520D303A8F68</a>
           </div>
       </div>
       </header>
