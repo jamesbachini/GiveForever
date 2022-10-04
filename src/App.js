@@ -12,6 +12,7 @@ function App() {
   const [donated,setDonated] = useState(0);
   const [lidoBalance,setLidoBalance] = useState(0);
   const [surplus,setSurplus] = useState(0);
+  const [connectionSatus,setConnection] = useState('Not Connected');
 
   const connect = async () => {
     await provider.send("eth_requestAccounts", []);
@@ -19,6 +20,7 @@ function App() {
     contract = new ethers.Contract(contractAddress, contractABI, signer);
     const userAddress = await signer.getAddress();
     console.log(userAddress);
+    setConnection(`Connected: ${userAddress}`);
     updateBalances();
   }
 
@@ -62,6 +64,9 @@ function App() {
             Surplus: {surplus} ETH<br />
           </div>
           <div className="App-button-box">
+            <div className="App-connection">
+              {connectionSatus}
+            </div>
             <button onClick={connect}>CONNECT</button>
           </div>
           <div className="App-button-box">

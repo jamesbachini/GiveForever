@@ -29,7 +29,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #669bb5;
 }
 
 .App-button-box {
@@ -42,7 +42,12 @@
   font-size: 0.7em;
 }
 
-button { width: 120px; height: 30px; border: 2px solid #CCC; border-radius: 3px; background: #FFF; color: #222; cursor: pointer; margin: 5px; border-radius: 99px; }
+.App-connection {
+  font-size: 0.3em;
+}
+
+button { width: 150px; height: 30px; border: none; border-radius: 3px; background: #669bb5; color: #FFF; cursor: pointer; margin: 5px; border-radius: 99px; }
+input[type=text] { width: 80px; height: 24px; text-align: center; }
 
 @keyframes App-logo-spin {
   from {
