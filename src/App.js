@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { ethers } from 'ethers';
 import contractABI from './GiveForeverABI.json';
 
-const contractAddress = '0x05F3849cECBD18145FC79786D8b16C3700d613F9'; // Goerli
+const contractAddress = '0xf0a8B14F0A9Ae12c994872028d3B520D303A8F68'; // Goerli
 let provider = new ethers.providers.Web3Provider(window.ethereum);
 let contract = new ethers.Contract(contractAddress, contractABI, provider);
 let signer;
