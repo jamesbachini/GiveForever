@@ -26,7 +26,7 @@ function App() {
     let userAmount = document.getElementById('deposit-amount').value;
     const weiAmount = ethers.utils.parseEther(userAmount);
     const tx = await contract.deposit({ value: weiAmount });
-    const receipt = await tx.wait();
+    await tx.wait();
     updateBalances();
   }
 
