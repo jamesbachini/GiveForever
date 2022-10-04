@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/GiveForever/static/css/main.166305cd.css",
+    "main.js": "/GiveForever/static/js/main.b976ab02.js",
+    "static/js/787.4954b547.chunk.js": "/GiveForever/static/js/787.4954b547.chunk.js",
+    "index.html": "/GiveForever/index.html",
+    "main.166305cd.css.map": "/GiveForever/static/css/main.166305cd.css.map",
+    "main.b976ab02.js.map": "/GiveForever/static/js/main.b976ab02.js.map",
+    "787.4954b547.chunk.js.map": "/GiveForever/static/js/787.4954b547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.166305cd.css",
+    "static/js/main.b976ab02.js"
+  ]
+}
